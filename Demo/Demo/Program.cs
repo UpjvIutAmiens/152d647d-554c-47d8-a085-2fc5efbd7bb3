@@ -17,7 +17,7 @@ namespace Demo
             for (int i=0; i<= valMax; i++)
             {
                 affichage +=
-                    String.Format("{0} x {1} = {2}",
+                    String.Format("{0,2} x {1} = {2:00}",
                     i, // element 0
                     multiple, // element 1
                     i * multiple //element 2
