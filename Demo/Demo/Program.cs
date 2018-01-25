@@ -16,14 +16,18 @@ namespace Demo
 
             for (int i=0; i<= valMax; i++)
             {
-                affichage = affichage + i + " x " + multiple;
-                affichage += " = " + (i * multiple);
+                affichage +=
+                    String.Format("{0} x {1} = {2}",
+                    i, // element 0
+                    multiple, // element 1
+                    i * multiple //element 2
+                    );
                 affichage += "\n";
             }
 
             Console.WriteLine(affichage);
-            System.Console.WriteLine("Press a key");
-            System.Console.ReadKey();
+            Console.WriteLine("Press a key");
+            Console.ReadKey();
         }
     }
 }
