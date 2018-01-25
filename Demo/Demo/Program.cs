@@ -16,12 +16,9 @@ namespace Demo
 
             for (int i=0; i<= valMax; i++)
             {
-                affichage +=
-                    String.Format("{0,2} x {1} = {2:00}",
-                    i, // element 0
-                    multiple, // element 1
-                    i * multiple //element 2
-                    );
+                // Interpolated String (à partir de C#v6)
+                int resultat = i * multiple;
+                affichage += $"{i,2} x {multiple} = {resultat:00}";
                 affichage += "\n";
             }
 
