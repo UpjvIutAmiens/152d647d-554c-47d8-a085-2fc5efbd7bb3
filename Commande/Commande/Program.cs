@@ -16,18 +16,26 @@ namespace Commande
             l1 = new LigneCmd();
 
             l1.designation = "Gomme";
-            l1.prixUnitaire = 1.2;
+            l1.PrixUnitaire = 1.2;
             l1.quantite = 10;
 
             LigneCmd l2 = new LigneCmd()
             {
                 designation = "Crayon",
-                prixUnitaire = 0.3,
+                PrixUnitaire = 0.3,
                 quantite = 50
             };
 
+            LigneCmd l3 = new LigneCmd();
+
+            l3.designation = "Bureau";
+            l3.PrixUnitaire = -1000;
+            l3.quantite = 100;
+
             Console.WriteLine(l1.Description());
             Console.WriteLine(l2.Description());
+            Console.WriteLine(l3.Description());
         }
+
     }
 }
