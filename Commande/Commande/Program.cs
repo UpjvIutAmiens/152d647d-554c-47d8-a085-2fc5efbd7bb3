@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.Design.Serialization;
 
 namespace Commande
 {
@@ -18,7 +19,15 @@ namespace Commande
             l1.prixUnitaire = 1.2;
             l1.quantite = 10;
 
+            LigneCmd l2 = new LigneCmd()
+            {
+                designation = "Crayon",
+                prixUnitaire = 0.3,
+                quantite = 50
+            };
+
             Console.WriteLine(l1.Description());
+            Console.WriteLine(l2.Description());
         }
     }
 }
