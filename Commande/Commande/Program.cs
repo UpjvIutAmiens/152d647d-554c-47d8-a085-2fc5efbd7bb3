@@ -15,20 +15,20 @@ namespace Commande
             // référencé par l1
             l1 = new LigneCmd();
 
-            l1.designation = "Gomme";
+            l1.Designation = "Gomme";
             l1.PrixUnitaire = 1.2;
             l1.Quantite = 10;
 
             LigneCmd l2 = new LigneCmd()
             {
-                designation = "Crayon",
+                Designation = "Crayon",
                 PrixUnitaire = 0.3,
                 Quantite = 50
             };
 
             LigneCmd l3 = new LigneCmd();
 
-            l3.designation = "Bureau";
+            l3.Designation = "Bureau";
             l3.PrixUnitaire = 1000;
             l3.Quantite = -100;
 

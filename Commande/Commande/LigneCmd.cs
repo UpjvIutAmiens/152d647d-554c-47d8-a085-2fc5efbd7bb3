@@ -4,11 +4,12 @@ namespace Commande
 {
     class LigneCmd // FQDN : Commande.LigneCmd
     {
-        public string designation;
+        
         
         // Les champs privés commence par _
         private double _prixUnitaire;
         private double _quantite;
+        public string _designation;
 
         // Création de la propriété PrixUnitaire
         // Les membres publiques commencent par une majuscule.
@@ -52,6 +53,12 @@ namespace Commande
             }
         }
 
+        public string Designation
+        {
+            get { return _designation; }
+            set { _designation = value; }
+        }
+
         public double Montant()
         {
             return PrixUnitaire * Quantite;
@@ -59,7 +66,7 @@ namespace Commande
 
         public string Description()
         {
-            return $"{designation}, pu:{PrixUnitaire}, qt:{Quantite}, mnt:{Montant()}";
+            return $"{Designation}, pu:{PrixUnitaire}, qt:{Quantite}, mnt:{Montant()}";
         }
     }
 }
