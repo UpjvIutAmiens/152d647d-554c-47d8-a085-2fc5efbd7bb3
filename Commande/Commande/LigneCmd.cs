@@ -9,7 +9,18 @@ namespace Commande
         // Les champs privés commence par _
         private double _prixUnitaire;
         private double _quantite;
-        public string _designation;
+        private string _designation;
+
+        // Le constructeur est appelé à la construction de l'objet (intanciation)
+        // Il a le même nom que la classe et il n'a pas de type de retour
+        public LigneCmd(string designation, double prixUnitaire, double quantite)
+        {
+            Designation = designation;
+            PrixUnitaire = prixUnitaire;
+            Quantite = quantite;
+        }
+
+
 
         // Création de la propriété PrixUnitaire
         // Les membres publiques commencent par une majuscule.
