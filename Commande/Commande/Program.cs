@@ -17,20 +17,20 @@ namespace Commande
 
             l1.designation = "Gomme";
             l1.PrixUnitaire = 1.2;
-            l1.quantite = 10;
+            l1.Quantite = 10;
 
             LigneCmd l2 = new LigneCmd()
             {
                 designation = "Crayon",
                 PrixUnitaire = 0.3,
-                quantite = 50
+                Quantite = 50
             };
 
             LigneCmd l3 = new LigneCmd();
 
             l3.designation = "Bureau";
-            l3.PrixUnitaire = -1000;
-            l3.quantite = 100;
+            l3.PrixUnitaire = 1000;
+            l3.Quantite = -100;
 
             Console.WriteLine(l1.Description());
             Console.WriteLine(l2.Description());
