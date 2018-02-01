@@ -1,4 +1,6 @@
-﻿namespace Commande
+﻿using System;
+
+namespace Commande
 {
     class LigneCmd // FQDN : Commande.LigneCmd
     {
@@ -15,7 +17,18 @@
             get { return _prixUnitaire; }
             // Acces en ecriture
             // La valeur affectée est accessible à travers la variable "value"
-            set { _prixUnitaire = value; }
+            set
+            {
+                if (value < 0)
+                {
+                    // throw lève une exception
+                    throw new ArgumentOutOfRangeException($"PU négatif : {value}");
+                }
+                else
+                {
+                    _prixUnitaire = value;
+                }
+            }
         }
 
         public double Montant()
