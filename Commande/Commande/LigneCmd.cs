@@ -59,14 +59,14 @@ namespace Commande
             set { _designation = value; }
         }
 
-        public double Montant()
+        public double Montant
         {
-            return PrixUnitaire * Quantite;
+            get { return PrixUnitaire * Quantite; }
         }
 
         public string Description()
         {
-            return $"{Designation}, pu:{PrixUnitaire}, qt:{Quantite}, mnt:{Montant()}";
+            return $"{Designation}, pu:{PrixUnitaire}, qt:{Quantite}, mnt:{Montant}";
         }
     }
 }
