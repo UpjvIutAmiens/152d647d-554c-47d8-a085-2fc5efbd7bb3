@@ -2,9 +2,13 @@
 {
     class LigneCmd // FQDN : Commande.LigneCmd
     {
-        string reference;
-        string designation;
-        double quantite;
-        double prixUnitaire;
+        public string designation;
+        public double quantite;
+        public double prixUnitaire;
+
+        public string Description()
+        {
+            return $"{designation}, pu:{prixUnitaire}, qt:{quantite}";
+        }
     }
 }
